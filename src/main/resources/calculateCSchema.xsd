@@ -1,0 +1,21 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://s2it.com.br/ws"
+           targetNamespace="http://s2it.com.br/ws" elementFormDefault="qualified">
+
+    <xs:element name="calculateCRequest">
+        <xs:complexType>
+            <xs:sequence>
+           		<xs:element name="number1" type="xs:integer"/>
+                <xs:element name="number2" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="calculateCResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numberC" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

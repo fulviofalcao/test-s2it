@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://s2it.com.br/ws"
+           targetNamespace="http://s2it.com.br/ws" elementFormDefault="qualified">
+
+    <xs:complexType name="binaryTreeRequest">
+		<xs:sequence>
+			<xs:element name="BinaryTreeType" type="tns:BinaryTreeType"/>
+		</xs:sequence>
+	</xs:complexType>
+    
+    <xs:complexType name="BinaryTreeType">
+		<xs:sequence>
+			<xs:element name="valor" type="xs:integer" />
+			<xs:element name="left" type="tns:BinaryTreeType"/>
+			<xs:element name="right" type="tns:BinaryTreeType"/>
+		</xs:sequence>
+	</xs:complexType>
+    
+    <xs:element name="binaryTreeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sumNode" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
